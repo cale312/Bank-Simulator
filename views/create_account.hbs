@@ -1,0 +1,32 @@
+{{#if messages.error}}
+<div class="alert alert-danger foat-right container">{{messages.error}}</div>
+{{/if}}
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="" method="post" class="form-group">
+                <h1>
+                    <strong>{{title}}</strong>
+                </h1>
+                <hr>
+                <label for="accountType" class="form-label">Account Type</label>
+                <input type="text" name="accountType" id="accountType" class="form-control">
+                <br>
+                <label for="accountName" class="form-label">Account Name</label>
+                <input type="tel" name="accountName" id="accountName" class="form-control">
+                <br>
+                <input type="submit" value="submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</body>
+<style>
+    .login,
+    .register {
+        visibility: hidden;
+    }
+
+    .logout {
+        visibility: visible;
+    }
+</style>

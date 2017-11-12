@@ -1,0 +1,31 @@
+<body>
+    <div class="container">
+        <h1>
+            <strong>Banks</strong>
+        </h1>
+        <hr>
+        <div class="row">
+            {{#each accounts}}
+            <div class="card-body">
+                <div class="card container">
+                    <span class="badge badge-dark"><strong>{{this.accountType}}</strong></span>
+                    <hr>
+                    Account Holder : <strong>{{this.accountHolder}}</strong>
+                    <hr>
+                    <div class="float-right">R <strong>{{this.balance}}</strong></div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+<style>
+    .login,
+    .register {
+        visibility: hidden;
+    }
+
+    .logout {
+        visibility: visible;
+    }
+</style>

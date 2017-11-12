@@ -1,0 +1,66 @@
+<body>
+    <p class="time alert alert-danger"></p>
+    <div class="container">
+        <hr>
+        <p>
+            <strong>{{accountType}}</strong>
+            <hr>
+            <div class="row">
+                <p class="col-md-4">
+                    Account Name : <strong>{{accountName}}</strong>
+                </p>
+                <p class="col-md-4">
+                    Available Balance : R <strong>{{balance}}</strong></p>
+            </div>
+            <hr>
+        </p>
+        <div class="row">
+            <br>
+            <div class="jumbotron lead">
+                <form action="" method="post" class="form-group">
+                    <label for="depositAmount" class="form-label">Enter deposit amount</label>
+                    <input type="number" name="depositAmount" id="" class="form-control" min="10" max="100">
+                    <br>
+                    <input type="submit" value="deposit" class="deposit-btn btn btn-outline-success">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<style>
+    .login,
+    .register {
+        visibility: hidden;
+    }
+
+    .logout {
+        visibility: visible;
+    }
+
+    .time {
+        animation: fade 1s;
+        position: absolute;
+    }
+
+    @keyframes fade {
+        from {
+            left: 100%;
+        }
+    }
+</style>
+<script>
+    document.querySelector('.time').innerHTML = new Date();
+    setInterval( () => {
+        var seconds = new Date().getSeconds();
+        document.querySelector('.time').innerHTML = new Date();
+        
+        if (seconds >= 30) {
+            document.querySelector('.deposit-btn').disabled = false
+        } else {
+            document.querySelector('.deposit-btn').disabled = true;
+        }
+    }, 1000);
+
+</script>

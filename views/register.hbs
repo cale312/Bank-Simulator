@@ -1,0 +1,57 @@
+{{#if messages.error}}
+<div class="alert alert-danger foat-right container">{{messages.error}}</div>
+{{/if}}
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="" method="post" class="form-group">
+                <div class="form-header">
+                    <h1><strong>{{title}}</strong></h1>
+                    <hr>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="firstname" class="col-form-label">First name(s)</label>
+                        <input id="firstname" class="form-control" type="text" name="firstname" value="" required autofocus>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="lastname" class="col-form-label">Last Name</label>
+                        <input id="lastname" class="form-control" type="text" name="lastname" value="" required>
+                    </div>
+                </div>
+                <label for="username" class="col-form-label">Username</label>
+                <input id="username" class="form-control" type="text" name="username" value="" required>
+                <div class="form-row" style="margin-bottom: -10px;">
+                    <div class="form-group col-md-6">
+                        <label for="password" class="col-form-label"> Password</label>
+                        <input id="password" class="form-control" type="password" name="password" value="" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="confirm-password" class="col-form-label"> Re-type Password</label>
+                        <input id="confirm-password" class="form-control" type="password" name="confirm-password" value="" required>
+                        <i class="status"></i>
+                    </div>
+                </div>
+                <label for="email" class="col-form-label"> Email</label>
+                <input id="email" class="form-control" type="email" name="email" value="" required>
+                <label for="cellnumber" class="col-form-label">Cell Number</label>
+                <input type="tel" id="cellnumber" class="form-control" type="tel" name="cellnumber" value="" required>
+                <br>
+                <input class="signUp-btn btn btn-success" type="submit" name="signup" value="Sign Up">
+            </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    const $password = $('#password');
+    const $confPAssword = $('#confirm-password');
+
+    $('#password, #confirm-password').on('keyup', function () {
+        if ($password.val() == $confPAssword.val()) {
+            document.querySelector('.status').innerHTML = '';
+        } else {
+            document.querySelector('.status').innerHTML = '<span class="" style = "color: red;" >passwords do not match</span>';
+        }
+    });
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- LOCAL STYLESHEETS -->
+    <link rel='stylesheet' href='/stylesheets/main.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap/css/bootstrap.css' />
+    <link rel='stylesheet' href='/stylesheets/font-awesome/css/font-awesome.css' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- LOCAL BOOTSTRAP FILES -->
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/popper.js"></script>
+    <script src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+        body {
+            font-family: 'Dosis', sans-serif;
+        }
+    </style>
+</head>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default bg-primary navbar-fixed-top">
+    <div class="navbar-header text-light">
+        <a href="/"><strong>Bank Simulator App</strong></a>
+    </div>
+
+    <div class="navbar-right">
+        <ul class="nav">
+            <li class="nav-link register">
+                <a href="/register">Register</a>
+            </li>
+            <li class="nav-link login">
+                <a href="/login">Login</a>
+            </li>
+            <li class="nav-link logout">
+                <a href="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{{{body}}}
+
+<footer class="footer footer-default fixed-bottom bg-primary container-fluid">
+    <br>
+    <div class="copyright text-left text-light">
+        &copy;
+        <script>
+            document.write(new Date().getFullYear())
+        </script>
+        <div class="float-right">
+            site By : caleArts &trade;
+        </div>
+    </div>
+    <br>
+</footer>
+
+{{!-- <script>
+    setTimeout(() => {
+        document.querySelector('.working').style.display = 'block';
+        document.querySelector('.loader').style.display = 'none';
+    }, 1000)
+</script> --}}
+
+</html>
