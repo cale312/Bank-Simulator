@@ -17,6 +17,7 @@ const createAccount = require('./routes/create_account');
 const account = require('./routes/account');
 const logout = require('./routes/logout');
 const bank = require('./routes/bank');
+const Delete = require('./routes/delete');
 
 // Connection Config file
 const connect = require('./config/connection');
@@ -54,7 +55,8 @@ app.use('/login', login);
 app.use('/create_account', isLoggedIn, createAccount);
 app.use('/account', isLoggedIn, account);
 app.use('/bank', isLoggedIn, bank);
-app.use('/logout', logout);
+app.use('/logout', isLoggedIn, logout);
+app.use('/delete', isLoggedIn, Delete)
 
 const port = process.env.PORT || 3001;
 app.listen(port, (err) => {

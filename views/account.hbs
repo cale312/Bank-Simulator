@@ -1,16 +1,16 @@
 <body>
-    <p class="time alert alert-danger"></p>
+    <p class="time alert alert-light bg-primary text-light"></p>
     <div class="container">
         <hr>
         <p>
-            <strong>{{accountType}}</strong> <span class="fa fa-pen"></span>
+            <strong>{{accountType}}</strong> <a href="/delete" class=""><span class="fa fa-close fa-lg text-danger"></span></a>
             <hr>
             <div class="row">
                 <p class="col-md-4">
                     Account Name : <strong>{{accountName}}</strong>
                 </p>
                 <p class="col-md-4">
-                    Available Balance : R <strong>{{balance}}</strong></p>
+                    Available Balance : <i class="fa fa-money"></i> R <strong>{{balance}}</strong></p>
             </div>
             <hr>
         </p>
